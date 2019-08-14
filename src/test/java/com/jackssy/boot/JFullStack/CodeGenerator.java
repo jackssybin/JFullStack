@@ -43,8 +43,8 @@ public class CodeGenerator {
     private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
     private static final String DRIVER_URL = "jdbc:mysql://localhost:3306/jackssy-full-stack?useUnicode=true&characterEncoding=UTF-8&useSSL=false";
     private static final String projectPath = "D:\\code\\java_base_items\\JFullStack";
-    private static final String includeTable = "user";
-    private static final String includeMoudle = "user";
+    private static final String includeTable = "mt_specs";
+    private static final String includeMoudle = "specs";
     private static final String parentMoudle = "com.jackssy.boot.JFullStack.web";
 
     public static void main(String[] args) {
@@ -94,8 +94,8 @@ public class CodeGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
-                return projectPath + "/src/main/resources/mapper/" + pc.getModuleName()
-                        + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+                return projectPath + "/src/main/resources/mapper/"
+                        + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
         /*
